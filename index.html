@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-3d"></div>
+    <header>
+        <div class="logo-container">
+            
+            <img src="./source.gif" alt="Logo" class="logo" id="logo">
+        </div>
+        <h1 class="first">PLAN YOUR NEXT BUNK</h1>
+    </header>
+    <div class="container">
+        <h2>Attendance Percentage Calculator</h2>
+        <div class="input-group">
+            <label for="lecture">Lecture Attendance L (%)</label>
+            <input type="number" id="lecture" placeholder="Enter Lecture Attendance">
+        </div>
+        <div class="input-group">
+            <label for="tutorial">Tutorial Attendance T (%)</label>
+            <input type="number" id="tutorial" placeholder="Enter Tutorial Attendance">
+        </div>
+        <div class="input-group">
+            <label for="practical">Practical Attendance P (%)</label>
+            <input type="number" id="practical" placeholder="Enter Practical Attendance">
+        </div>
+        <div class="input-group">
+            <label for="skilling">Skilling Attendance S (%)</label>
+            <input type="number" id="skilling" placeholder="Enter Skilling Attendance">
+        </div>
+        <button onclick="calculateAttendance()">Calculate Attendance</button>
+        <div class="results">
+            <h3 id="result"></h3>
+            <p id="message"></p>
+            <div id="celebration" class="celebration"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <h1> ---THIS SITE IS ONLY FOR KLU STUDENTS---</h1>
+</body>
+</html>

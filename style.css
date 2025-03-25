@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background-3d {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(141, 49, 212, 0.2) 0%, transparent 70%);
+    z-index: -1;
+    animation: float 15s infinite ease-in-out, glowPulse 4s infinite ease-in-out;
+    transform: translateZ(0);
+}
+
+header {
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 10;
+    transition: transform 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header:hover {
+    transform: translateY(-5px);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(45deg, gold, orange, gold) border-box;
+    padding: 10px;
+    box-shadow: 0 0 15px gold;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px gold;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(141, 49, 212, 0.5));
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(10deg);
+    filter: drop-shadow(0 0 20px rgba(141, 49, 212, 0.8));
+}
+
+.first {
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #8d31d4;
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px rgba(141, 49, 212, 0.7);
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.first:hover {
+    text-shadow: 0 0 25px rgba(141, 49, 212, 1);
+    transform: scale(1.05);
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transform: translateZ(0);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px) translateZ(0);
+    box-shadow: 0 15px 40px rgba(141, 49, 212, 0.4);
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+h2:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.input-group {
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 10px rgba(141, 49, 212, 0.2);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ddd;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+label:hover {
+    color: #fff;
+    transform: translateX(2px);
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+}
+
+input:focus {
+    border-color: #8d31d4;
+    box-shadow: 0 0 20px rgba(141, 49, 212, 0.7);
+    transform: scale(1.02);
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #8d31d4, #b466ff);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    box-shadow: 0 5px 15px rgba(141, 49, 212, 0.4);
+}
+
+button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(141, 49, 212, 0.7);
+    background: linear-gradient(45deg, #b466ff, #8d31d4);
+}
+
+.results {
+    margin-top: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+#result {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+#result:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+#message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#message:hover {
+    transform: scale(1.05);
+}
+
+.celebration {
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) translateZ(0); }
+    50% { transform: translateY(-30px) translateZ(0); }
+}
+
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.4; }
+}
+
+@keyframes confetti {
+    0% { transform: translateY(-100%) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(1080deg); opacity: 0; }
+}
+
+@keyframes sparkle {
+    0% { transform: scale(0) rotate(0deg); opacity: 0; }
+    50% { transform: scale(1.2) rotate(180deg); opacity: 1; }
+    100% { transform: scale(0) rotate(360deg); opacity: 0; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.confetti {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: hsl(var(--hue), 100%, 50%);
+    animation: confetti var(--duration) linear forwards;
+}
+
+.sparkle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #fff 20%, transparent 70%);
+    border-radius: 50%;
+    animation: sparkle 1.5s ease-in-out forwards;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+    .first {
+        font-size: 2rem;
+    }
+    .logo-container {
+        padding: 8px;
+    }
+    .logo {
+        max-width: 120px;
+    }
+}
